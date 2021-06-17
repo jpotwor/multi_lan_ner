@@ -1,3 +1,5 @@
+import spacy
+
 def find_entities(input_phrase, language):
   models = {
       'en': 'en_core_web_sm',
