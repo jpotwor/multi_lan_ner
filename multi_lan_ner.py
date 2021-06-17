@@ -13,9 +13,9 @@ def find_entities(input_phrase, language):
     res = []
     for ent in doc.ents:
       res.append({'text': ent.text, 'start_pos': ent.start_char, 'end_pos': ent.end_char, 'type': ent.label_})
-      return res
+    return res
   else:
     raise FileNotFoundError('model %s not found, please download' % language)
 
-
-print(find_entities("Apple is looking at buying U.K. startup for $1 billion", 'en'))
+if __name__ == "__main__":
+    print(find_entities("As I had only one hour to write this on my old Dell computer, I am aware there is space for improvement.", 'en'))
